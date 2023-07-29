@@ -67,7 +67,7 @@ targetZodiac.addEventListener("change", () => {
 })
 
 
-
+console.log(love)
 
 
 
