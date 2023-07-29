@@ -2,11 +2,13 @@ const pokedisplay = document.getElementById("displayPokemon")
 const targetCapricorn = document.getElementById("target-capricorn")
 const targetZodiac = document.getElementById("Zodiac")
 const targetHoroscope = document.querySelector("#pokemonHoroscope")
+const targetIdentity = document.querySelector("#pokemon-name")
 
 console.log(targetHoroscope)
 console.log(targetZodiac)
 console.log(targetCapricorn)
 console.log(pokedisplay)
+console.log(targetIdentity)
 
 const allPokemon = []
 
@@ -26,13 +28,14 @@ const findPokemon = (pokemonfind) => {
             console.log(allPokemon)
             // console.log(pokemon)
             pokemonChoosen(pokemon)
+            pokemonNameNum(pokemon)
         
         }),
         (error) => console.log(error)    
     }
 
 // window.onload = () => {
-findPokemon() 
+findPokemon("pikachu") 
 // }
 
 const pokemonChoosen = (pokemon) => {
@@ -47,6 +50,9 @@ const pokemonDescrip = (horoscope) => {
     return targetHoroscope.innerHTML = horoscope
 }
 
+const pokemonNameNum = (nameNum) => {
+    return targetIdentity.innerHTML = nameNum.name + " #" + nameNum.id
+}
 
 
 const allZodiac = {
@@ -58,7 +64,8 @@ const allZodiac = {
     }
     
 } 
-
+// console.log(allZodiac.capricorn.pokemon[0].pokemo)
+// console.log(findPokemon(allZodiac.capricorn.pokemon[0].pokemo))
 
 
 targetZodiac.addEventListener("change", () => {
@@ -66,8 +73,8 @@ targetZodiac.addEventListener("change", () => {
     const signZ = allZodiac[chosenZodiac]
     findPokemon(signZ.pokemon[0].pokemo)
     pokemonDescrip(signZ.pokemon[0].reason)
+    pokemonNameNum(signZ.pokemon[0].pokemo)
 })
-
 
 
 
