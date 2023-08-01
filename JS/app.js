@@ -4,6 +4,7 @@ const targetZodiac = document.getElementById("Zodiac")
 const targetHoroscope = document.querySelector("#pokemonHoroscope")
 const targetIdentity = document.querySelector("#pokemon-name")
 const targetSign = document.querySelector("#Sign")
+const targetPokeball = document.querySelector(".pokeball")
 
 console.log(targetHoroscope)
 console.log(targetZodiac)
@@ -50,9 +51,7 @@ const pokemonChoosen = (pokemon) => {
         pokedisplay.style.width = "500px"
         pokedisplay.style.border = "2px solid black"
 
-    pokedisplay.innerHTML = pokemonInfo
-
-   
+    pokedisplay.innerHTML = pokemonInfo 
 }
 
 const pokemonDescrip = (horoscope) => {
@@ -78,6 +77,13 @@ const pokemonSign = (sign) => {
     targetSign.style.backgroundColor = "white"
     targetSign.style.width = "200px"
     targetSign.style.border = "2px solid black"
+}
+
+const pokeballMove = () => {
+    targetPokeball.style.animationName = "pokeballback"
+    targetPokeball.style.animationDuration = "1.5s"
+    targetPokeball.style.animationTimingFunction = "ease"
+    targetPokeball.style.animationFillMode = "forwards"
 }
 
 const allZodiac = {
@@ -157,7 +163,9 @@ targetZodiac.addEventListener("change", () => {
     pokemonNameNum(signZ.pokemon[0].pokemo)
     pokemonSign(signZ.sign)
 
+    pokeballMove()
 
+    //manually have to keep removing and nulling the animation classlist to let me repeat teh animation.
     pokedisplay.style.animation = "none"
     pokedisplay.offsetHeight
     targetHoroscope.style.animation = "none"
@@ -174,37 +182,3 @@ targetZodiac.addEventListener("change", () => {
     targetIdentity.style.animation = null
     targetSign.style.animation = null
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function pickRandom() {
-//     return Math.floor(Math.random() * 3) + 1;
-//   }
-
-//   function pickRandom() {
-//     return Math.floor(Math.random() * 3) + 1;
-//   }
-//   signZ.pokemon[pickRandom].pokemo
-//   Karl Rodulfo4:16 PM
-//   signZ.pokemon[pickRandom()].pokemo
-
-
-// const pokemonList = json.results 
-// console.log(pokemonList)
-
-// const pokemonImage = pokemonList.map((pokemon) =>{
-//     fetch(pokemon.url).then((response) => {
-//         response.json()
-//     })
-//     .then((pokemonInfo) => console.log(pokemonInfo.abilities))
-// })
