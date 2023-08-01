@@ -11,6 +11,8 @@ console.log(targetCapricorn)
 console.log(pokedisplay)
 console.log(targetIdentity)
 
+
+
 const allPokemon = []
 
 const findPokemon = (pokemonfind) => {
@@ -43,20 +45,39 @@ const pokemonChoosen = (pokemon) => {
     // console.log(pokemon)
     const pokemonInfo = 
         "<img src =" + pokemon.image + " />"
+        pokedisplay.style.backgroundColor = "white"
+        pokedisplay.style.height = "500px"
+        pokedisplay.style.width = "500px"
+        pokedisplay.style.border = "2px solid black"
 
     pokedisplay.innerHTML = pokemonInfo
+
+   
 }
 
 const pokemonDescrip = (horoscope) => {
-    return targetHoroscope.innerHTML = horoscope
+    targetHoroscope.innerHTML = horoscope
+    targetHoroscope.style.position = "relative"
+    targetHoroscope.style.backgroundColor = "white"
+    targetHoroscope.style.width = "300px"
+    targetHoroscope.style.height = "300px"
+    targetHoroscope.style.border = "2px solid black"
 }
 
 const pokemonNameNum = (nameNum) => {
-    return targetIdentity.innerHTML = nameNum.name + " #" + nameNum.id
+
+    targetIdentity.innerHTML = nameNum.name + " #" + nameNum.id
+    targetIdentity.style.backgroundColor = "white"
+    targetIdentity.style.height = "40px"
+    targetIdentity.style.width = "200px"
+    targetIdentity.style.border = "2px solid black"
 }
 
 const pokemonSign = (sign) => {
-    return targetSign.innerHTML = sign
+    targetSign.innerHTML = sign
+    targetSign.style.backgroundColor = "white"
+    targetSign.style.width = "200px"
+    targetSign.style.border = "2px solid black"
 }
 
 const allZodiac = {
@@ -76,7 +97,7 @@ const allZodiac = {
     },
     pisces: {
         pokemon: [{pokemo: 131, reason: "<p> Pisces is a Water sign, and Lapras being a Water/Ice-type Pokémon aligns with the element of Water.</p>" + "<p> Both Pisces and Lapras are known for their gentle and compassionate nature. Pisceans are often described as empathetic and caring, and Lapras' reputation as a helpful and nurturing Pokémon reflects these qualities.</P>" + "<p> Lapras is often associated with the sea, which resonates with Pisces' symbol, the Fish. The idea of Lapras being a guardian of the oceans aligns with Pisces' deep connection to the mystical and emotional aspects of water.</p>" + "<p> Lapras' ability to sing and calm rough seas reflects Pisces' ability to soothe and bring peace to chaotic situations.</p>" + "<p> Both Pisces and Lapras have a dreamy and mystical side, with Lapras often being depicted in legends as a mythical and elusive creature.</p>" +
-        "<p> Lapras' name may be associated with \"lapis lazuli,\" a gemstone known for its deep blue color, connecting it to Pisces' ruling planet Neptune, often associated with the ocean and blue hues.</p>" + "<p> It's essential to reiterate that this connection is purely for fun and not based on any real astrological principles. Lapras' characteristics transcend any specific zodiac sign, making it a beloved and serene Pokémon in its own right. Enjoy exploring the calming and enchanting traits of Lapras through this imaginative lens! For a personalized horoscope, consult a professional astrologer based on your birth details.</p>" ,}],
+        "<p> Lapras' name may be associated with \"lapis lazuli,\" a gemstone known for its deep blue color, connecting it to Pisces' ruling planet Neptune, often associated with the ocean and blue hues.</p>" ,}],
         sign: "Pisces"
     },
     taurus: {
@@ -102,7 +123,8 @@ const allZodiac = {
          sign: "Leo" 
     },
     virgo: {
-        pokemon: [{pokemo: 34, reason: "<p>Virgo is an Earth sign, and Nidoking being a Poison/Ground-type Pokémon aligns with the element of Earth.</p>" + "<p> Both Virgo and Nidoking are known for their practicality and reliability. Virgos are often described as hardworking and analytical, and Nidoking's powerful and sturdy appearance reflects these qualities.</p>" + "<p> Nidoking's moves like Earthquake and Poison Jab demonstrate its strong and formidable nature, symbolizing the grounded and capable aspects associated with Virgo.</p>" + "<p> Nidoking's name and design draw inspiration from medieval knights and warriors, linking it to Virgo's theme of service and dedication.</p>" + "<p> Both Virgo and Nidoking are known for their methodical and detail-oriented approach to tasks.</p>" + "<p> Nidoking's final evolutionary stage represents growth and development, paralleling Virgo's theme of progress and self-improvement.</p>" ,}]
+        pokemon: [{pokemo: 34, reason: "<p>Virgo is an Earth sign, and Nidoking being a Poison/Ground-type Pokémon aligns with the element of Earth.</p>" + "<p> Both Virgo and Nidoking are known for their practicality and reliability. Virgos are often described as hardworking and analytical, and Nidoking's powerful and sturdy appearance reflects these qualities.</p>" + "<p> Nidoking's moves like Earthquake and Poison Jab demonstrate its strong and formidable nature, symbolizing the grounded and capable aspects associated with Virgo.</p>" + "<p> Nidoking's name and design draw inspiration from medieval knights and warriors, linking it to Virgo's theme of service and dedication.</p>" + "<p> Both Virgo and Nidoking are known for their methodical and detail-oriented approach to tasks.</p>" + "<p> Nidoking's final evolutionary stage represents growth and development, paralleling Virgo's theme of progress and self-improvement.</p>" ,}],
+        sign: "Virgo"
     },
     libra: {
         pokemon: [{pokemo: 36, reason: "<p> Libra is an Air sign, and while Clefable is not directly related to air, its Fairy typing represents a sense of enchantment and magic often associated with Air signs.</p>" + "<p> Both Libra and Clefable are known for their peaceful and harmonious nature. Libras are often described as diplomatic and balanced, and Clefable's serene appearance and gentle demeanor reflect these qualities.</p>" +
@@ -135,6 +157,22 @@ targetZodiac.addEventListener("change", () => {
     pokemonNameNum(signZ.pokemon[0].pokemo)
     pokemonSign(signZ.sign)
 
+
+    pokedisplay.style.animation = "none"
+    pokedisplay.offsetHeight
+    targetHoroscope.style.animation = "none"
+    targetHoroscope.offsetHeight
+    targetIdentity.style.animation = "none"
+    targetIdentity.offsetHeight
+    targetSign.style.animation = "none"
+    targetSign.offsetHeight
+
+
+
+    pokedisplay.style.animation = null
+    targetHoroscope.style.animation = null
+    targetIdentity.style.animation = null
+    targetSign.style.animation = null
 })
 
 

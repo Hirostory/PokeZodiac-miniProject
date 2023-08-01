@@ -1,3 +1,112 @@
+html {
+    height: 100vh;
+}
+
 body {
     background-color: #EAE9DF;
+    position: relative;
+    height: 100vh;
+    width: 100vw;    
+}
+
+.redpart {
+    height: 800px;
+    width: 1200px;
+    background-color: red;
+    position: absolute;
+    opacity: .3;
+    border-radius: 30px;
+    bottom: 70%;
+    left: 20%;
+    z-index: -1;
+}
+
+.logocontainer{
+    display: flex;
+    justify-content: center;
+    bottom: 80%;
+}
+
+#pokemonHoroscope {
+    font-size: small;
+    display: table-cell;
+    padding: 30px;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 700px;
+    left: 600px;
+    animation-name: slideInDown;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+
+}
+
+.Logo {
+   margin-top: 100px;
+}
+
+#displayPokemon {
+   margin-left: 20%;
+   padding: 5px;
+   border-radius: 25px;  
+   margin-top: 100px;
+   animation-name: slideInLeft;
+   animation-duration: 1.5s;
+   animation-timing-function: linear;
+}
+
+
+#pokemon-name {
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 20px;
+    position: absolute; 
+    margin-left: 150px;
+    bottom: 100px;
+    top: 800px;
+    animation-name: slideInLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: linear; 
+}
+
+#Sign {
+    text-align: center;
+    padding: 5px;
+    border-radius: 25px;
+    position: absolute;
+    left: 300px;
+    top: 840px;
+    animation-name: slideInRight;
+    animation-duration: 1.5s;
+    animation-timing-function: linear; 
+}
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-300px);
+    }
+}
+
+@keyframes slideInDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-300px);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-500px);
+    }
+    100%{
+        transform: translateX(0)
+    }
+    
 }

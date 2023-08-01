@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeZodiac</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 </head>
 <body>
-    <img src="images/PokeZodiac-Logo.png" alt="Logo">
+    <div class="redpart"></div>
+    <div class="blackpart"></div>
+    <div class="logocontainer">
+    <img src="images/PokeZodiac-Logo.png" alt="Logo" class="Logo">
+    </div>
     <h4>Embark on a Celestial Journey with your Perfect Pokemon </h4>
-    <h2 id="Sign"></h2>
+    
     <select id="Zodiac">
         <option>please choose your horoscope</option>
         <option id="target-capricorn" value="capricorn">Capricorn Dec. 22 - Jan. 19 </option>
@@ -25,10 +30,16 @@
         <option id="target-scorpio" value="scorpio">Scorpio Oct. 23 -  Nov. 21</option>
         <option id="target-sagittarius" value="sagittarius">Sagittarius Nov. 22 - Dec. 21</option>
      </select>
-
-    <div id="displayPokemon"></div>
+    
+    <div id="displayPokemon" class="displayPokemon slideInLeft"></div>
     <h2 id="pokemon-name"></h2>
     <p id="pokemonHoroscope"></p>
+    <h2 id="Sign"></h2>
+    <div class="pokeball">
+        <img class="minball" src="images/MinimalPoke.png" alt="Ball">
+    </div>
+
+    
     <script type="text/javascript" src="JS/app.js"></script>
 </body>
 </html>
