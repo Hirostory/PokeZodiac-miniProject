@@ -23,9 +23,9 @@ body {
     width: 100px;
     border-radius: 50%;
     background-color: #BD3837;
-    position: fixed;
+    position: relative;
     left: 44.5%;
-    bottom: 9.5%;
+    bottom: 86%;
     z-index: 2;
     animation-name: blinking;
     animation-duration: 1.5s;
@@ -76,7 +76,7 @@ body {
 .logocontainer{
     display: flex;
     justify-content: center;
-    position: sticky;
+    position: relative;
     z-index: 1;
 }
 
@@ -148,7 +148,7 @@ body {
 .selZodiac {
     position: absolute;
     left: 40%;
-    bottom: 40.5%;
+    bottom: 44%;
     z-index: 2;
     font-family: 'Lato', sans-serif;
     font-size: 1rem;
@@ -185,7 +185,7 @@ body {
         transform: translateX(0);
     }
     100% {
-        transform: translate(-115%, -520%);
+        transform: translate(-115%, -540%);
         opacity: 1;
     }
 }
@@ -242,17 +242,18 @@ body {
 
 /* === Mobile mode === */
 
-@media all and (max-width: 500px) {
+@media screen and (max-width: 700px) {
 
     html {
-        height: 100vh;
-        width: 100vw;
+        /* height: 100vh;
+        width: 100vw; */
     }
 
     .logocontainer{
         display: flex;
         justify-content: center;
-        height: 40%;
+        right: 15px;
+        height: 38%;
         width: auto;
     }
 
@@ -262,25 +263,190 @@ body {
      }
 
      .statement {
-        position: absolute;
+        display: flex;
+        justify-content: center;
         font-family: 'Lato', sans-serif;
         color: whitesmoke;
-        left: 16%;
+        left: 18px;
         z-index: 1;
         font-size: 10px;
     }
 
     .pokeball{
-        position: absolute;
-        height: 20%;
+        display: block;
+        justify-content: center;
         width: auto;
         transform: rotate(19deg);
+        right: 140px;
+        left: 160px;
     }
 
     .minball {
-        max-width: 200%;
+        max-width: 900%;
         max-height: auto;
     }
+
+    .selZodiac {
+        position: absolute;
+        left: 10%;
+        bottom: 44%;
+        z-index: 2;
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        padding: .5em .5em;
+        background-color: #F0F0F0;
+        color: #373737;
+        opacity: 1;
+        
+    }
+
+    #displayPokemon {
+        display: flex;
+        justify-content: center;
+        max-width: 50%;
+        max-height: 50%;
+        margin-left: 20%;
+        padding: 45px;
+        border-radius: 25px;  
+        margin-top: 100px;
+        animation-name: slideInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+     }
+    
+    
+    #pokemon-name {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding-top: 10px;
+        border-radius: 20px;
+        position: absolute; 
+        margin-left: 100px;
+        bottom: 100px;
+        top: 650px;
+        animation-name: slideInLeft;
+        animation-duration: 1.5s;
+        animation-timing-function: linear; 
+     }
+
+     #Sign {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 5px;
+        border-radius: 25px;
+        position: absolute;
+        left: 50px;
+        top: 700px;
+        animation-name: slideInRight;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+    }
+
+    #pokemonHoroscope {
+        display: flex;
+        justify-content: center;
+        max-height: 5%;
+        max-width: 5%;
+        font-size: small;
+        display: table-cell;
+        padding: 10px;
+        border-radius: 25px;
+        position: absolute;
+        bottom: 0px;
+        top: 30px;
+        left: 0px;
+        animation-name: slideInDown;
+        animation-duration: 1.5s;
+        animation-timing-function: linear;
+    
+    }
+
+    .circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        position: relative;
+        left: 44.5%;
+        bottom: 2000%;
+        z-index: 2;
+    
+    }
+
+    .redpart {
+        height: 400px;
+        width: 600px;
+        overflow-y: hidden;
+        background-color: red;
+        position: absolute;
+        opacity: .3;
+        border-radius: 30px;
+        bottom: 53%;
+        left: 10%;
+        z-index: -1;
+    }
+    
+    .whitepart {
+        height: 250px;
+        width: 500px;
+        overflow-y: hidden;
+        background-color: white;
+        position: absolute;
+        opacity: .3;
+        border-radius: 30px;
+        bottom: -25%;
+        left: 10%;
+        z-index: -2;
+    }
+    
+    .blackpart {
+        height: 100px;
+        width: 550px;
+        background-color: black;
+        position: absolute;
+        opacity: .3;
+        border-radius: 30px;
+        z-index: -1;
+        bottom: 26%;
+        right: 40%;
+    }
+
+
+    /* --- mobile animation --- */
+
+    @keyframes logoMove {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes selectSlide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translate(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pokeballback {
+        from {
+             transform: translateX(0);
+        }
+        to {
+             transform: translate(-180%, 20%);
+             opacity: .5;
+             z-index: -1;
+        }
+     }
+
+
+    
 
 }
 
