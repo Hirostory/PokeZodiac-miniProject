@@ -5,9 +5,11 @@ Welcome to PokéZodiac, your ultimate destination for discovering the Pokémon t
 # How To Use
 
 ![Screenshot 2023-08-02 at 4 52 35 PM](https://github.com/Hirostory/PokeZodiac-miniProject/assets/135872883/5dc3f37f-9f62-42c2-b44c-a8e03af10af4)
+
 howver over the pokéball and select the user"s zodiac sign.
 
-![Screenshot 2023-08-02 at 4 52 49 PM](https://github.com/Hirostory/PokeZodiac-miniProject/assets/135872883/0aef9b5d-ea53-40f6-8858-ab1bf942d79c)
+![Screenshot 2023-08-02 at 4 53 13 PM](https://github.com/Hirostory/PokeZodiac-miniProject/assets/135872883/75cfffda-6a67-432e-af05-e47adf127e34)
+
 Pokémon will populate with a derscription on why user is compatible with the chosen Pokémon
 
 # Language Used
