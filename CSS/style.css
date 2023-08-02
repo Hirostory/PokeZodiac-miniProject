@@ -242,7 +242,7 @@ body {
 
 /* === Mobile mode === */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 500px) {
 
     html {
         /* height: 100vh;
@@ -267,7 +267,7 @@ body {
         justify-content: center;
         font-family: 'Lato', sans-serif;
         color: whitesmoke;
-        left: 18px;
+        left: 75px;
         z-index: 1;
         font-size: 10px;
     }
@@ -288,8 +288,8 @@ body {
 
     .selZodiac {
         position: absolute;
-        left: 10%;
-        bottom: 50%;
+        left: 20%;
+        bottom: 48%;
         z-index: 2;
         font-family: 'Lato', sans-serif;
         font-size: 1rem;
@@ -322,8 +322,7 @@ body {
         padding-top: 10px;
         border-radius: 20px;
         position: absolute; 
-        margin-left: 100px;
-        bottom: 100px;
+        bottom: 0px;
         top: 650px;
         animation-name: slideInLeft;
         animation-duration: 1.5s;
@@ -338,7 +337,7 @@ body {
         border-radius: 25px;
         position: absolute;
         left: 50px;
-        top: 700px;
+        top: 740px;
         animation-name: slideInRight;
         animation-duration: 1.5s;
         animation-timing-function: linear;
