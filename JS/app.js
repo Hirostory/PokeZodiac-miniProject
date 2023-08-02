@@ -12,7 +12,7 @@ const targetStatement = document.querySelector(".statement")
 const targetSelector = document.querySelector(".selZodiac")
 const targetBlinking = document.querySelector(".circle")
 
-
+//future planing, wanted to add like history list 
 const allPokemon = []
 
 const findPokemon = (pokemonfind) => {
