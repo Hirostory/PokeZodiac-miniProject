@@ -13,14 +13,6 @@ const targetSelector = document.querySelector(".selZodiac")
 const targetBlinking = document.querySelector(".circle")
 
 
-console.log(targetHoroscope)
-console.log(targetZodiac)
-console.log(targetCapricorn)
-console.log(pokedisplay)
-console.log(targetIdentity)
-
-
-
 const allPokemon = []
 
 const findPokemon = (pokemonfind) => {
@@ -37,17 +29,12 @@ const findPokemon = (pokemonfind) => {
             }
             allPokemon.push(pokemon)
             console.log(allPokemon)
-            // console.log(pokemon)
             pokemonChoosen(pokemon)
             pokemonNameNum(pokemon)
         
         }),
         (error) => console.log(error)    
     }
-
-// window.onload = () => {
-// findPokemon(87)
-// }
 
 const pokemonChoosen = (pokemon) => {
     // console.log(pokemon)
@@ -107,6 +94,7 @@ const moveSelector = () => {
     targetSelector.style.animationFillMode = "forwards"
 }
 
+//manually added a new objects for each pokemons to have their signs, decriptions, and saperated pokemon to their signs
 const allZodiac = {
     capricorn: {
         pokemon: [{pokemo: 3, reason: "<p>Capricorns are known for their grounded and practical nature. Venusaur is a Grass/Poison-type Pokémon, representing the Earth element and a connection to the natural world. Its strong connection to plants and the environment aligns with Capricorn's appreciation for stability and being in touch with the physical world.</p>" + "<p> Both Capricorn and Venusaur can be strong and enduring. Venusaur's sturdy and powerful appearance reflects Capricorn's determination and ability to handle challenges with resilience.</p>" + "<p> Capricorns are often associated with the winter season, and Venusaur's final evolutionary stage can be seen as a symbol of maturity and growth, aligning with the Capricorn's theme of progress and development.</p>" + "<p> Venusaur's ability to use plants and flowers for various attacks represents its nurturing and protective qualities, much like how Capricorns are known for being caring and protective of their loved ones.</p>" + "<p> Capricorns are ruled by Saturn, which is associated with responsibility and hard work. Venusaur's status as a fully evolved Pokémon reflects its growth and evolution, paralleling Capricorn's goal-oriented and ambitious nature.</p>",}],
@@ -172,10 +160,9 @@ const allZodiac = {
 
     
 } 
-// console.log(allZodiac.capricorn.pokemon[0].pokemo)
-// console.log(findPokemon(allZodiac.capricorn.pokemon[0].pokemo))
 
 
+//added eventlistener so when user picked a sign animations and pokemon will appear. 
 targetZodiac.addEventListener("change", () => {
     const chosenZodiac = targetZodiac.value
     const signZ = allZodiac[chosenZodiac]
