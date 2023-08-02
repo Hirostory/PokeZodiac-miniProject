@@ -1,3 +1,5 @@
+
+// -- my target zones from html ---
 const pokedisplay = document.getElementById("displayPokemon")
 const targetCapricorn = document.getElementById("target-capricorn")
 const targetZodiac = document.getElementById("Zodiac")
@@ -5,6 +7,11 @@ const targetHoroscope = document.querySelector("#pokemonHoroscope")
 const targetIdentity = document.querySelector("#pokemon-name")
 const targetSign = document.querySelector("#Sign")
 const targetPokeball = document.querySelector(".pokeball")
+const targetLogo = document.querySelector(".Logo")
+const targetStatement = document.querySelector(".statement")
+const targetSelector = document.querySelector(".selZodiac")
+const targetBlinking = document.querySelector(".circle")
+
 
 console.log(targetHoroscope)
 console.log(targetZodiac)
@@ -86,6 +93,20 @@ const pokeballMove = () => {
     targetPokeball.style.animationFillMode = "forwards"
 }
 
+const moveLogo = () => {
+    targetLogo.style.animationName = "logoMove"
+    targetLogo.style.animationDuration = "1.5s"
+    targetLogo.style.animationTimingFunction = "ease"
+    targetLogo.style.animationFillMode = "forwards"
+}
+
+const moveSelector = () => {
+    targetSelector.style.animationName = "selectSlide"
+    targetSelector.style.animationDuration = "1.5s"
+    targetSelector.style.animationTimingFunction = "ease"
+    targetSelector.style.animationFillMode = "forwards"
+}
+
 const allZodiac = {
     capricorn: {
         pokemon: [{pokemo: 3, reason: "<p>Capricorns are known for their grounded and practical nature. Venusaur is a Grass/Poison-type Pokémon, representing the Earth element and a connection to the natural world. Its strong connection to plants and the environment aligns with Capricorn's appreciation for stability and being in touch with the physical world.</p>" + "<p> Both Capricorn and Venusaur can be strong and enduring. Venusaur's sturdy and powerful appearance reflects Capricorn's determination and ability to handle challenges with resilience.</p>" + "<p> Capricorns are often associated with the winter season, and Venusaur's final evolutionary stage can be seen as a symbol of maturity and growth, aligning with the Capricorn's theme of progress and development.</p>" + "<p> Venusaur's ability to use plants and flowers for various attacks represents its nurturing and protective qualities, much like how Capricorns are known for being caring and protective of their loved ones.</p>" + "<p> Capricorns are ruled by Saturn, which is associated with responsibility and hard work. Venusaur's status as a fully evolved Pokémon reflects its growth and evolution, paralleling Capricorn's goal-oriented and ambitious nature.</p>",}],
@@ -164,8 +185,11 @@ targetZodiac.addEventListener("change", () => {
     pokemonSign(signZ.sign)
 
     pokeballMove()
+    moveLogo()
+    moveSelector()
 
     //manually have to keep removing and nulling the animation classlist to let me repeat teh animation.
+    targetStatement.style.visibility = "hidden"
     pokedisplay.style.animation = "none"
     pokedisplay.offsetHeight
     targetHoroscope.style.animation = "none"
@@ -174,6 +198,8 @@ targetZodiac.addEventListener("change", () => {
     targetIdentity.offsetHeight
     targetSign.style.animation = "none"
     targetSign.offsetHeight
+    targetBlinking.style.animation = "none"
+    targetBlinking.style.backgroundColor = "white"
 
 
 

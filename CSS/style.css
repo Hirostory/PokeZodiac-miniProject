@@ -18,6 +18,23 @@ body {
     width: 100vw;    
 }
 
+.circle {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #BD3837;
+    position: fixed;
+    left: 44.5%;
+    bottom: 9.5%;
+    z-index: 2;
+    animation-name: blinking;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+
+}
+
 .redpart {
     height: 800px;
     width: 1200px;
@@ -59,8 +76,8 @@ body {
 .logocontainer{
     display: flex;
     justify-content: center;
-    bottom: 50%;
-   
+    position: sticky;
+    z-index: 1;
 }
 
 #pokemonHoroscope {
@@ -83,20 +100,12 @@ body {
     top: 8%;
     bottom: 30%;
     transform: rotate(19deg);
-    /* animation-name: pokeballback;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards; */
 }
 
 
 .Logo {
    margin-top: 140px;
    z-index: 1;
-   animation-name: logoMove;
-   animation-duration: 3s;
-   animation-timing-function: ease-in;
-   animation-fill-mode: forwards; 
 }
 
 #displayPokemon {
@@ -155,6 +164,32 @@ body {
 
 /* ANIMATION CODE */
 
+@keyframes blinking {
+    0% {
+        background-color: #BD3837;
+    }
+    30% {
+        background-color: #EDA3A5;
+    }
+    60% {
+        background-color: #D44A33;
+    }
+    100% {
+        background-color: white;
+    }
+    
+}
+
+@keyframes selectSlide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translate(-115%, -520%);
+        opacity: 1;
+    }
+}
+
 @keyframes slideInLeft {
     0% {
         transform: translateX(0);
@@ -187,11 +222,9 @@ body {
 @keyframes logoMove {
     from {
         transform: translateX(0);
-        transform: translateY(0);
     }
     to {
-        transform: translateX(200px);
-        transform: translateY(70px);
+        transform: translateX(-58%);
     }
 }
 
@@ -206,6 +239,8 @@ body {
         z-index: -1;
    }
 }
+
+/* === Mobile mode === */
 
 @media all and (max-width: 500px) {
 
