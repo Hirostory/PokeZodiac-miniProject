@@ -252,7 +252,7 @@ body {
     .logocontainer{
         display: flex;
         justify-content: center;
-        right: 15px;
+        right: 10px;
         height: 38%;
         width: auto;
     }
@@ -347,15 +347,15 @@ body {
     #pokemonHoroscope {
         display: flex;
         justify-content: center;
-        max-height: 5%;
-        max-width: 5%;
+        max-height: 1%;
+        max-width: 1%;
         font-size: small;
         display: table-cell;
         padding: 10px;
         border-radius: 25px;
-        position: absolute;
+        position: relative;
         bottom: 0px;
-        top: 30px;
+        top: 60px;
         left: 0px;
         animation-name: slideInDown;
         animation-duration: 1.5s;
