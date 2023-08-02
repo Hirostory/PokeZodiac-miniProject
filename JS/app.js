@@ -36,6 +36,7 @@ const findPokemon = (pokemonfind) => {
         (error) => console.log(error)    
     }
 
+// added a function to gather the pokemon image and added some CSS class list
 const pokemonChoosen = (pokemon) => {
     // console.log(pokemon)
     const pokemonInfo = 
